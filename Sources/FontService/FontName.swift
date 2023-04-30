@@ -11,6 +11,11 @@ public struct FontName {
         case bold    = "SFProDisplay-Bold"
         case light   = "SFProDisplay-Light"
         case heavy   = "SFProDisplay-Heavy"
+        
+        func font(size: CGFloat) -> UIFont {
+            let descriptor = UIFontDescriptor(fontAttributes: [.name: self.rawValue])
+            return UIFont(descriptor: descriptor, size: size)
+        }
     }
     
     public enum Roboto: String, CaseIterable {
@@ -27,10 +32,10 @@ public struct FontName {
         case mediumItalic = "Roboto-MediumItalic"
         case black        = "Roboto-Black"
         case blackItalic  = "Roboto-BlackItalic"
-    }
-    
-    func font(size: CGFloat, name: String) -> UIFont {
-        let descriptor = UIFontDescriptor(fontAttributes: [.name: name])
-        return UIFont(descriptor: descriptor, size: size)
+        
+        func font(size: CGFloat) -> UIFont {
+            let descriptor = UIFontDescriptor(fontAttributes: [.name: self.rawValue])
+            return UIFont(descriptor: descriptor, size: size)
+        }
     }
 }
