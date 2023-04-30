@@ -12,7 +12,7 @@ public struct FontName {
         case light   = "SFProDisplay-Light"
         case heavy   = "SFProDisplay-Heavy"
         
-        func font(size: CGFloat) -> UIFont {
+        public func font(size: CGFloat) -> UIFont {
             let descriptor = UIFontDescriptor(fontAttributes: [.name: self.rawValue])
             return UIFont(descriptor: descriptor, size: size)
         }
@@ -33,7 +33,7 @@ public struct FontName {
         case black        = "Roboto-Black"
         case blackItalic  = "Roboto-BlackItalic"
         
-        func font(size: CGFloat) -> UIFont {
+        public func font(size: CGFloat) -> UIFont {
             let descriptor = UIFontDescriptor(fontAttributes: [.name: self.rawValue])
             return UIFont(descriptor: descriptor, size: size)
         }
